@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODIN - Matrix Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo-container">
+          <div class="logo-image"></div>
+          <div class="icon-container"><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt=""> </div>
+         <h1 class="logo">ODIN</h1>
+        </div>
+        <div class="imagen-perfil">
+          <!-- <img src="./img/joanna-borkowska-C0nfLS04P4c-unsplash.webp" alt=""> -->
+        </div> 
+        <p class="photo-credit">
+          Photo by
+         <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-planta-en-un-campo-de-hierba-C0nfLS04P4c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>Joanna Borkowskat</a
+          >
+          on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+        </p>
+      </div>
+      <div class="content">
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn">
+            <i class="fas fa-sun"></i> <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="text-content">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p>Sign up now to get started.</p>
+          <p class="bold-text">You know you want to.</p>
+        </div>
+        <div class="form-container">
+          <h2>Let's do this!</h2>
+          <form id="signup-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone-number">PHONE NUMBER</label>
+                <input type="tel" id="phone-number" name="phone-number" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" required />
+                <span id="password-error" class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="create-button">Create Account</button>
+            <p class="login-link">
+              Already have an account? <a href="#">Log in</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

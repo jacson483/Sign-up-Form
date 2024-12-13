@@ -1,0 +1,349 @@
+/* General Styles */
+body {
+  font-family: "Consolas", monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000; /* Dark background */
+  color: #0f0; /* Classic Matrix green text */
+  transition: background-color 0.3s ease; /* For dark mode */
+  overflow: hidden; /* Hide horizontal scroll */
+}
+
+.dark-mode body {
+  background-color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #0f0; /* Classic Matrix green links */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ff00; /* Slightly brighter on hover */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  border: 1px solid #0f0; /* green border for container */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 40%;
+  background-image: url("https://unsplash.com/es/fotos/un-primer-plano-de-una-planta-en-un-campo-de-hierba-C0nfLS04P4c?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  color: #0f0; /* green text in sidebar */
+  overflow: hidden;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+}
+
+.dark-mode .sidebar::before {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 4px rgba(0, 255, 0, 0.8); /* green text shadow*/
+}
+
+.logo-image {
+  background-image: url("https://cdn.icon-icons.com/icons2/1691/PNG/512/odin_112373.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  filter: brightness(150%) invert(0.8); /* Invert the icon color to green */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  width: 58px;
+  height: 80px;
+}
+
+.icon-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo {
+  font-size: 3em;
+  font-family: "Norse Bold", sans-serif;
+  margin: 0;
+  color: #0f0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 255, 0, 0.8); /* green text shadow*/
+}
+.imagen-perfil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/joanna-borkowska-C0nfLS04P4c-unsplash.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 25%;
+}
+.photo-credit {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.5); /* green text shadow */
+}
+
+.photo-credit a {
+  color: #0f0;
+}
+
+/* Content Styles */
+.content {
+  width: 60%;
+  padding: 40px;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  color: #0f0; /* green text */
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+.dark-mode .content {
+  background-color: #1a1a1a;
+  color: #0f0;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.theme-toggle button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0f0; /* green color */
+}
+
+.dark-mode .theme-toggle button {
+  color: #0f0;
+}
+
+.theme-toggle button i {
+  margin: 0 5px;
+}
+
+.theme-toggle button .fa-sun {
+  display: block;
+}
+
+.theme-toggle button .fa-moon {
+  display: none;
+}
+
+.dark-mode .theme-toggle button .fa-sun {
+  display: none;
+}
+
+.dark-mode .theme-toggle button .fa-moon {
+  display: block;
+}
+
+.text-content {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.text-content p {
+  margin: 10px 0;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.3); /* green text shadow */
+}
+
+.text-content .bold-text {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.6); /* darker green text shadow*/
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.8); /* green text shadow*/
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0f0; /* green label */
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.2); /* green text shadow*/
+}
+.dark-mode label {
+  color: #0f0; /* green label darkmode */
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.2); /* green text shadow darkmode */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0f0; /* Green Border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #222; /* dark input color */
+  color: #0f0;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.2); /* green text shadow*/
+}
+
+.dark-mode input {
+  background-color: #333;
+  color: #0f0; /* green input text color darkmode */
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.2);
+}
+
+input:focus {
+  border-color: #00ff00; /* Brighter green border */
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green glow */
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 3px;
+  display: block;
+}
+
+.create-button {
+  background-color: #006400;
+  color: #0f0;
+  border: 1px solid #00ff00;
+  padding: 15px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.5);
+}
+
+.create-button:hover {
+  background-color: #004d00; /* Darken on hover */
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+.login-link {
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 255, 0, 0.4);
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .sidebar,
+  .content {
+    width: 100%;
+  }
+  .sidebar {
+    min-height: 300px;
+    justify-content: center;
+  }
+  .logo-container {
+    top: 10px;
+    left: 10px;
+  }
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  .logo {
+    font-size: 2.5em;
+  }
+  .icon-container {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Matrix Digital Rain Effect*/
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="none" width="100" height="100"/><text style="font-size:1.2em;font-family: monospace;" x="5" y="25" fill="#0f0">01011001</text><text style="font-size:1.2em;font-family: monospace;" x="5" y="45" fill="#0f0">10110101</text><text style="font-size:1.2em;font-family: monospace;" x="5" y="65" fill="#0f0">10110011</text><text style="font-size:1.2em;font-family: monospace;" x="5" y="85" fill="#0f0">01011010</text><text style="font-size:1.2em;font-family: monospace;" x="55" y="25" fill="#0f0">10011010</text><text style="font-size:1.2em;font-family: monospace;" x="55" y="45" fill="#0f0">01101001</text><text style="font-size:1.2em;font-family: monospace;" x="55" y="65" fill="#0f0">10101011</text><text style="font-size:1.2em;font-family: monospace;" x="55" y="85" fill="#0f0">11010100</text></svg>');
+  background-repeat: repeat;
+  opacity: 0.1;
+  z-index: -1;
+  animation: matrixRain 10s linear infinite;
+}
+
+@keyframes matrixRain {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
